@@ -17,12 +17,12 @@ int main() {
 	maxY = Y1;
 	if (Y2 > maxY) minY=X2;
 	if (Y3 > maxY) minY=X3;
-	if ((Xdot < minX)&&(Xdot > maxX)&&(Ydot < minY)&&(Ydot > maxY)){      //Если точка лежит вне интервалах нахождения точек треугольника, она обязательно вне треугольника.
-	res = 0;                                                              //При очень больших производных возможно переполнение. Тут мы этого избегаем.
-	exit(0);
+	if ((Xdot < minX)&&(Xdot > maxX)&&(Ydot < minY)&&(Ydot > maxY)){      
+		res = 0;                                                      //For very large derivatives overflow. Here we avoid it.
+		exit(0);
 	}
 
-	if (X2 == X1) {                                                       //Учитываем возможность вертикальных сторон треугольника
+	if (X2 == X1) {                                                       //consider vertical side of the triangle
 		if(((Xdot <= X1)&&(X3 > X1))||((Xdot >= X1)&&(X3 < X1))){
 			res = 0;
 		}
@@ -43,7 +43,7 @@ int main() {
 	}
 
 
-	if (X2 == X3) {                                                       //Учитываем возможность вертикальных сторон треугольника
+	if (X2 == X3) {                                                       //consider vertical side of the triangle
 		if(((Xdot <= X3)&&(X1 > X3))||((Xdot >= X3)&&(X1 < X3))){
 			res = 0;
 		}
@@ -63,7 +63,7 @@ int main() {
 		}
 	}
 
-	if (X3 == X1) {                                                      //Учитываем возможность вертикальных сторон треугольника
+	if (X3 == X1) {                                                      //consider vertical side of the triangle
 		if(((Xdot <= X1)&&(X2 > X1))||((Xdot >= X1)&&(X2 < X1))){
 			res = 0;
 		}
