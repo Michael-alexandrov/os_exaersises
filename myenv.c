@@ -7,7 +7,7 @@ extern char ** environ;
 
 int main (){
 int k;
-char *user = "username"; //вставить имя пользователя, возвращенное командой whoami
+char *user = "username"; //РІСЃС‚Р°РІРёС‚СЊ РёРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ, РІРѕР·РІСЂР°С‰РµРЅРЅРѕРµ РєРѕРјР°РЅРґРѕР№ whoami
 
 for (i=0; k<1000; k++){
 	if ((strstr (environ[k], user)) != NULL){
