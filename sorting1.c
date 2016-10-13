@@ -18,7 +18,7 @@ int main(){
 			j++;
 		}
 	}
-		for (i = 0; i < 20; i++)
-			printf("%d ", a[i]);
-			return 0;
+	for (i = 0; i < 20; i++)
+	printf("%d ", a[i]);
+	return 0;
 }
